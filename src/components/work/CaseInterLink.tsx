@@ -168,17 +168,6 @@ function CaptionScrollRow({
 }
 
 export default function CaseInterLink() {
-  const offlineEvents = [
-    'Interlink Meet up Viet Nam.jpg',
-    'Interlink Meetup VietNam.jpg',
-    'Interlink VietNam meet up.jpg',
-    'Interlink Meetup Indonesia.jpg',
-    'Interlink India Meet Up.jpg',
-    'Interlink meet up India.jpg',
-    'Interlink Meetup India.jpg',
-    'Meetup Nigeria.jpg',
-  ];
-
   const onlineCommunity = [
     'Interlink Game Tournament.jpg',
     'Interlink online game tournament.jpg',
