@@ -218,3 +218,68 @@ body {
   color: var(--accent);
   text-shadow: 0 0 20px rgba(56, 189, 248, 0.3), 0 0 40px rgba(56, 189, 248, 0.1);
 }
+
+/* ─── Responsive utilities ─────────────────────────────────── */
+/* Auto-stack any grid that uses these classes on smaller viewports */
+.grid-auto-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.grid-auto-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+/* Tablet: 3-col → 2-col, keep 2-col */
+@media (max-width: 900px) {
+  .grid-auto-3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Mobile: everything → 1-col */
+@media (max-width: 640px) {
+  .grid-auto-3,
+  .grid-auto-2 {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Section padding helper — fluid horizontal */
+.section-pad {
+  padding-left: clamp(1rem, 5vw, 1.5rem);
+  padding-right: clamp(1rem, 5vw, 1.5rem);
+}
+
+/* Mobile-specific tweaks for case-study sections */
+@media (max-width: 640px) {
+  /* Reduce vertical section padding */
+  section[id] {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+  }
+  /* Accordion case header — tighter padding */
+  .case-header {
+    padding: 1.25rem 1.25rem !important;
+    gap: 0.75rem !important;
+  }
+  /* Headings shrink */
+  .scroll-fade h2.font-display,
+  h2.font-display {
+    font-size: clamp(1.75rem, 8vw, 2.5rem) !important;
+  }
+}
+
+/* Marquee row — smaller image height on phones */
+@media (max-width: 640px) {
+  .scroll-row-img {
+    height: 140px !important;
+  }
+  .scroll-row-img-tall {
+    height: 180px !important;
+  }
+  /* Facebook analytics + phone — stack on mobile */
+  .grid-fb-phone {
+    grid-template-columns: 1fr !important;
+  }
+}

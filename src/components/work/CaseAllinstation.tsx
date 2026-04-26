@@ -237,12 +237,8 @@ export default function CaseAllinstation() {
         </p>
         {/* Key metrics — bold numbers */}
         <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: '1rem',
-            marginTop: '0.5rem',
-          }}
+          className="grid-auto-3"
+          style={{ gap: '1rem', marginTop: '0.5rem' }}
         >
           {[
             { number: '600–800K', label: 'Monthly sessions' },
@@ -293,11 +289,8 @@ export default function CaseAllinstation() {
           Blog UI
         </p>
         <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: '0.75rem',
-          }}
+          className="grid-auto-3"
+          style={{ gap: '0.75rem' }}
         >
           <MacFrame
             src="/assets/allinstation/articles/Article UI.png"

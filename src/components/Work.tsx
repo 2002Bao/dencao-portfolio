@@ -57,6 +57,7 @@ function AccordionCase({ entry }: { entry: CaseEntry }) {
       {/* Collapsed header — always visible */}
       <button
         onClick={() => setOpen(!open)}
+        className="case-header"
         style={{
           width: '100%',
           background: 'none',

@@ -87,7 +87,7 @@ function DesignScrollRow({
           {tripled.map(({ file, project }, i) => (
             <div
               key={`${file}-${i}`}
-              className="design-item"
+              className="design-item scroll-row-img-tall"
               style={{
                 position: 'relative',
                 height,

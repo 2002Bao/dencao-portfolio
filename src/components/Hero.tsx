@@ -198,6 +198,7 @@ export default function Hero() {
 
       {/* Hero content */}
       <div
+        className="hero-content-pad"
         style={{
           position: 'relative',
           zIndex: 10,
@@ -276,6 +277,9 @@ export default function Hero() {
         }
         @media (max-width: 768px) {
           .hero-floats { display: none; }
+        }
+        @media (max-width: 640px) {
+          .hero-content-pad { padding: 5rem 1.25rem 5rem !important; }
         }
       `}</style>
     </section>

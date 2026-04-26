@@ -161,12 +161,8 @@ export default function CaseHoldstation() {
         </p>
         {/* Key metrics — bold numbers */}
         <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: '1rem',
-            marginTop: '0.5rem',
-          }}
+          className="grid-auto-3"
+          style={{ gap: '1rem', marginTop: '0.5rem' }}
         >
           {[
             { number: '11M+', label: 'Organic reach across X & Facebook in 90 days' },
@@ -242,6 +238,7 @@ export default function CaseHoldstation() {
 
         {/* Analytics left + iPhone right */}
         <div
+          className="grid-fb-phone"
           style={{
             display: 'grid',
             gridTemplateColumns: '1fr auto',
@@ -419,11 +416,8 @@ export default function CaseHoldstation() {
           Landing Page Redesign
         </p>
         <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(2, 1fr)',
-            gap: '1.5rem',
-          }}
+          className="grid-auto-2"
+          style={{ gap: '1.5rem' }}
         >
           {/* holdstation.com */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>

@@ -44,7 +44,7 @@ export default function Process() {
         <h2
           className="scroll-fade font-display"
           style={{
-            fontSize: '1.875rem',
+            fontSize: 'clamp(2rem, 5vw, 3rem)',
             fontWeight: 400,
             color: 'var(--foreground)',
             marginBottom: '3rem',

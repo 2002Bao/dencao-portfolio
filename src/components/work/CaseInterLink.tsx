@@ -65,6 +65,7 @@ function ScrollRow({
               src={`${basePath}/${file}`}
               alt={label}
               loading="lazy"
+              className="scroll-row-img"
               style={{
                 height,
                 borderRadius: '0.5rem',
@@ -150,6 +151,7 @@ function CaptionScrollRow({
                 src={`${basePath}/${file}`}
                 alt={caption}
                 loading="lazy"
+                className="scroll-row-img"
                 style={{
                   height,
                   borderRadius: '0.5rem',
@@ -224,11 +226,8 @@ export default function CaseInterLink() {
 
       {/* ===== Key Metrics ===== */}
       <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(3, 1fr)',
-          gap: '1rem',
-        }}
+        className="grid-auto-3"
+        style={{ gap: '1rem' }}
       >
         {[
           { number: '1.5M+', label: 'Verified users in 3 months' },
@@ -297,9 +296,8 @@ export default function CaseInterLink() {
 
         {/* X Analytics — chart + metric cards */}
         <div
+          className="grid-auto-2"
           style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
             gap: '1rem',
             alignItems: 'start',
           }}
@@ -341,7 +339,7 @@ export default function CaseInterLink() {
                 <span
                   className="font-tech"
                   style={{
-                    fontSize: '1.6rem',
+                    fontSize: 'clamp(1.1rem, 4vw, 1.6rem)',
                     fontWeight: 700,
                     color: 'var(--accent)',
                     display: 'block',
@@ -373,11 +371,8 @@ export default function CaseInterLink() {
           Go-To-Market Strategy
         </p>
         <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(2, 1fr)',
-            gap: '1rem',
-          }}
+          className="grid-auto-2"
+          style={{ gap: '1rem' }}
         >
           <div
             className="liquid-glass"
@@ -660,9 +655,8 @@ export default function CaseInterLink() {
           Ambassador Performance
         </p>
         <div
+          className="grid-auto-2"
           style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(2, 1fr)',
             gap: '1.25rem',
             alignItems: 'start',
           }}
@@ -738,9 +732,8 @@ export default function CaseInterLink() {
 
         {/* Discord data — laptop mockups */}
         <div
+          className="grid-auto-2"
           style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(2, 1fr)',
             gap: '1.25rem',
             alignItems: 'start',
           }}
