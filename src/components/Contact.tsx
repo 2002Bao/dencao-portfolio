@@ -90,7 +90,7 @@ export default function Contact() {
           cao.huanbao@gmail.com
         </a>
 
-        <a href="/resume/Den_Cao_CV.pdf" download style={{ color: 'var(--foreground)', alignSelf: 'flex-start', textUnderlineOffset: '5px' }}>Download CV (PDF) ↗</a>
+        <a href="/resume/Den_Cao_CV.pdf" download="CV_Cao Huan Bao.pdf" style={{ color: 'var(--foreground)', alignSelf: 'flex-start', textUnderlineOffset: '5px' }}>Download CV (PDF) ↗</a>
 
         {/* Social links */}
         <div
