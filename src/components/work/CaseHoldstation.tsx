@@ -1,124 +1,16 @@
 import { LightboxImg } from '../Lightbox';
 
-/** Laptop-style frame with X timeline via syndication iframe */
-function XTimelineEmbed({ username }: { username: string }) {
+function XProfileCard() {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-      <p
-        style={{
-          fontSize: '0.75rem',
-          letterSpacing: '0.08em',
-          textTransform: 'uppercase',
-          color: 'var(--muted-foreground)',
-        }}
-      >
-        X Posts
-      </p>
-      {/* Laptop body */}
-      <div
-        style={{
-          maxWidth: '48rem',
-          margin: '0 auto',
-          width: '100%',
-        }}
-      >
-        {/* Screen bezel */}
-        <div
-          style={{
-            background: 'linear-gradient(145deg, #1a1a2e, #16213e)',
-            borderRadius: '1rem 1rem 0 0',
-            padding: '0.5rem 0.5rem 0',
-            border: '1px solid rgba(255,255,255,0.08)',
-            borderBottom: 'none',
-          }}
-        >
-          {/* Webcam dot */}
-          <div
-            style={{
-              width: '0.375rem',
-              height: '0.375rem',
-              borderRadius: '50%',
-              background: '#333',
-              margin: '0 auto 0.375rem',
-            }}
-          />
-          {/* Screen area */}
-          <div
-            style={{
-              borderRadius: '0.25rem 0.25rem 0 0',
-              overflow: 'hidden',
-              background: '#000',
-            }}
-          >
-            {/* Browser chrome */}
-            <div
-              style={{
-                background: 'rgba(255,255,255,0.06)',
-                padding: '0.5rem 0.75rem',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '0.375rem',
-                borderBottom: '1px solid rgba(255,255,255,0.08)',
-              }}
-            >
-              {['#ff5f57', '#febc2e', '#28c840'].map((c) => (
-                <span
-                  key={c}
-                  style={{
-                    width: '0.4rem',
-                    height: '0.4rem',
-                    borderRadius: '50%',
-                    background: c,
-                    display: 'inline-block',
-                  }}
-                />
-              ))}
-              <span
-                style={{
-                  marginLeft: '0.5rem',
-                  fontSize: '0.6rem',
-                  color: 'var(--muted-foreground)',
-                }}
-              >
-                x.com/{username}
-              </span>
-            </div>
-            {/* Timeline via syndication iframe */}
-            <iframe
-              src={`https://syndication.twitter.com/srv/timeline-profile/screen-name/${username}?dnt=true&embedId=twitter-widget-0&features=eyJ0ZndfdGltZWxpbmVfbGlzdCI6eyJidWNrZXQiOltdLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2ZvbGxvd2VyX2NvdW50X3N1bnNldCI6eyJidWNrZXQiOnRydWUsInZlcnNpb24iOm51bGx9LCJ0ZndfdHdlZXRfZWRpdF9iYWNrZW5kIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd19yZWZzcmNfc2Vzc2lvbiI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9fQ%3D%3D&frame=false&hideBorder=true&hideFooter=true&hideHeader=true&hideScrollBar=false&lang=en&theme=dark&transparent=true`}
-              style={{
-                width: '100%',
-                height: '480px',
-                border: 'none',
-                background: '#000',
-              }}
-              title={`@${username} X timeline`}
-              sandbox="allow-scripts allow-same-origin allow-popups"
-            />
-          </div>
+    <section aria-label="Holdstation X profile">
+      <p style={{ fontSize: '.75rem', letterSpacing: '.08em', textTransform: 'uppercase', color: 'var(--muted-foreground)', marginBottom: '1rem' }}>X Posts</p>
+      <div className="liquid-glass" style={{ maxWidth: '38rem', margin: '0 auto', borderRadius: '1rem', overflow: 'hidden' }}>
+        <img src="/assets/holdstation/x-profile.png" alt="Holdstation X profile, @HoldstationW" loading="lazy" width={599} height={530} style={{ display: 'block', width: '100%', height: 'auto' }} />
+        <div style={{ padding: '1.25rem' }}>
+          <a href="https://x.com/HoldstationW" target="_blank" rel="noopener noreferrer" style={{ display: 'block', padding: '.9rem 1.25rem', borderRadius: '.65rem', background: '#fff', color: '#111', textAlign: 'center', textDecoration: 'none', fontWeight: 600 }}>View profile ↗</a>
         </div>
-        {/* Laptop bottom chin / keyboard area */}
-        <div
-          style={{
-            background: 'linear-gradient(180deg, #1a1a2e, #0f0f23)',
-            borderRadius: '0 0 0.25rem 0.25rem',
-            height: '0.75rem',
-            border: '1px solid rgba(255,255,255,0.08)',
-            borderTop: 'none',
-          }}
-        />
-        {/* Laptop base / hinge */}
-        <div
-          style={{
-            width: '40%',
-            height: '0.25rem',
-            margin: '0 auto',
-            background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent)',
-            borderRadius: '0 0 0.5rem 0.5rem',
-          }}
-        />
       </div>
-    </div>
+    </section>
   );
 }
 
@@ -154,10 +46,10 @@ export default function CaseHoldstation() {
           <strong style={{ color: 'var(--foreground)', fontWeight: 500 }}>
             Action:
           </strong>{' '}
-          Blended sharp crypto humor with premium brand aesthetics. Took dense
-          DeFAI mechanics and distilled them into bite-sized formats that hit
-          both veterans and curious newcomers. Redesigned key landing pages to
-          actually catch the traffic we were generating.
+          Developed educational and social content around wallet and DeFi products,
+          with visual formats for Facebook and X. Contributed to landing-page
+          messaging and product onboarding. Recent World App work extends this
+          into notification planning, activation messages and measurement requirements.
         </p>
         {/* Key metrics — bold numbers */}
         <div
@@ -165,9 +57,9 @@ export default function CaseHoldstation() {
           style={{ gap: '1rem', marginTop: '0.5rem' }}
         >
           {[
-            { number: '11M+', label: 'Organic reach across X & Facebook in 90 days' },
-            { number: '↑', label: 'Measurable lift in landing page conversion' },
-            { number: '1', label: 'Content framework adopted across Holdstation ecosystem' },
+            { number: 'Education', label: 'Product stories and social content' },
+            { number: 'Activation', label: 'Landing pages and lifecycle messaging' },
+            { number: 'Measurement', label: 'GA4 and on-chain dashboard requirements' },
           ].map(({ number, label }) => (
             <div
               key={label}
@@ -221,7 +113,7 @@ export default function CaseHoldstation() {
       </div>
 
       {/* X Posts — live timeline in laptop frame */}
-      <XTimelineEmbed username="HoldstationW" />
+      <XProfileCard />
 
       {/* Facebook Posts */}
       <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>

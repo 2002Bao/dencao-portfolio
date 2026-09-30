@@ -1,63 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { LightboxImg } from '../Lightbox';
 
-/** Thumbnail-click-to-play YouTube embed */
-function YouTubeEmbed({ videoId, title }: { videoId: string; title: string }) {
-  return (
-    <div
-      style={{ position: 'relative', width: '100%', aspectRatio: '16/9', cursor: 'pointer' }}
-      onClick={(e) => {
-        const container = e.currentTarget;
-        const iframe = document.createElement('iframe');
-        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-        iframe.allow =
-          'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-        iframe.allowFullscreen = true;
-        iframe.style.cssText =
-          'position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:0.75rem;';
-        container.innerHTML = '';
-        container.appendChild(iframe);
-      }}
-    >
-      <img
-        src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
-        alt={title}
-        loading="lazy"
-        style={{
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover',
-          borderRadius: '0.75rem',
-          display: 'block',
-        }}
-      />
-      <div
-        style={{
-          position: 'absolute',
-          inset: 0,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          background: 'rgba(0,0,0,0.3)',
-          borderRadius: '0.75rem',
-          transition: 'background 0.2s',
-        }}
-        onMouseEnter={(e) =>
-          ((e.currentTarget as HTMLElement).style.background = 'rgba(0,0,0,0.45)')
-        }
-        onMouseLeave={(e) =>
-          ((e.currentTarget as HTMLElement).style.background = 'rgba(0,0,0,0.3)')
-        }
-      >
-        <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
-          <circle cx="32" cy="32" r="32" fill="rgba(255,255,255,0.15)" />
-          <polygon points="26,20 50,32 26,44" fill="white" />
-        </svg>
-      </div>
-    </div>
-  );
-}
-
 /** Auto-scrolling marquee row — triplicates images to ensure no gaps */
 function ScrollRow({
   images,
@@ -223,17 +166,17 @@ export default function CaseAllinstation() {
           <strong style={{ color: 'var(--foreground)', fontWeight: 500 }}>
             Context:
           </strong>{' '}
-          Allinstation wanted to own the crypto news game in Vietnam. The
-          content existed — the system didn't.
+          Allinstation serves Vietnamese readers following fast-moving financial
+          and crypto markets. The editorial challenge was to make timely news
+          and technical topics clear across the website and social channels.
         </p>
         <p>
           <strong style={{ color: 'var(--foreground)', fontWeight: 500 }}>
             Action:
           </strong>{' '}
-          Built the editorial engine from zero. Locked in core pillars (market
-          news, DeFi deep-dives, emerging narratives), set a daily publishing
-          cadence, and weaponized Facebook memes to funnel traffic straight to
-          the blog.
+          Researched and wrote market news, project explainers and sector analysis.
+          Contributed to editorial scheduling, WordPress SEO and Facebook content,
+          adapting the same topics into articles, visuals and short social formats.
         </p>
         {/* Key metrics — bold numbers */}
         <div
@@ -241,9 +184,9 @@ export default function CaseAllinstation() {
           style={{ gap: '1rem', marginTop: '0.5rem' }}
         >
           {[
-            { number: '600–800K', label: 'Monthly sessions' },
-            { number: '140K', label: 'Active users with daily reading habits' },
-            { number: '1.1M+', label: 'Organic Facebook reach per month' },
+            { number: 'Research', label: 'Market news and sector explainers' },
+            { number: 'Editorial', label: 'Article planning and WordPress publishing' },
+            { number: 'Social', label: 'Facebook formats and distribution' },
           ].map(({ number, label }) => (
             <div
               key={label}
@@ -395,16 +338,11 @@ export default function CaseAllinstation() {
         >
           Video content
         </p>
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '1rem',
-          }}
-        >
-          <YouTubeEmbed videoId="SNox7-jhXPg" title="Allinstation video 1" />
-          <YouTubeEmbed videoId="mHPqrYDiVaI" title="Allinstation video 2" />
-        </div>
+        <LightboxImg
+          src="/assets/allinstation/video-content.jpg"
+          alt="Allinstation video content samples: Mint Blockchain, Banana Gun, SoMon, Bitlayer, Mantle and Nigella Chain"
+          style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '0.75rem' }}
+        />
       </div>
     </div>
   );

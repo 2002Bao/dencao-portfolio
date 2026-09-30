@@ -241,8 +241,9 @@ export default function Hero() {
             textShadow: '0 1px 10px rgba(0,0,0,0.5)',
           }}
         >
-          Content strategist, finance brain. I help brands turn heavy
-          technical lifts into stories people actually stick around to read.
+          Financial research, educational content and channel growth.
+          I connect editorial planning, visual storytelling and KOL campaigns
+          for finance and Web3 brands.
         </p>
 
         <button

@@ -38,19 +38,21 @@ export default function About() {
           }}
         >
           <p>
-            Based in Saigon. Applied Finance degree. Two years deep in Web3
-            content — scaling an editorial site to 600K+ monthly readers,
-            running social plays that hit 11M+ organic reach.
+            Based in Ho Chi Minh City. My background combines Applied Finance,
+            equity research and hands-on content marketing across Web3 products
+            and media. I turn market research into explainers, social content
+            and campaigns that people can understand.
           </p>
           <p>
-            The thing I care about: making complex financial ideas land with
-            real people. Every post that performs has a system behind it. I
-            build the research pipelines, editorial calendars, and distribution
-            loops that keep audiences coming back on autopilot.
+            My work spans editorial planning at Allinstation, building the Somnia
+            Insights X channel, KOL and community campaigns at InterLink, and
+            product education at Holdstation. The samples below show the writing,
+            visual work and distribution behind those projects.
           </p>
           <p>
-            Currently into: content strategy, personal branding, and turning
-            niche expertise into trust at scale.
+            At Holdstation, my recent focus includes World App activation messages,
+            notification planning and performance dashboards. That work connects
+            content decisions with how people actually use a product.
           </p>
         </div>
       </div>

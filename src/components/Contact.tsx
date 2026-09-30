@@ -60,8 +60,8 @@ export default function Contact() {
             Let's build something.
           </h2>
           <p style={{ color: 'var(--muted-foreground)', fontSize: '1rem' }}>
-            Open to remote roles in content strategy and personal branding.
-            Drop a line.
+            Open to opportunities in financial education, content strategy and
+            brand growth. Based in Vietnam; available for international teams.
           </p>
         </div>
 
@@ -89,6 +89,8 @@ export default function Contact() {
         >
           cao.huanbao@gmail.com
         </a>
+
+        <a href="/resume/Den_Cao_CV.pdf" download style={{ color: 'var(--foreground)', alignSelf: 'flex-start', textUnderlineOffset: '5px' }}>Download CV (PDF) ↗</a>
 
         {/* Social links */}
         <div

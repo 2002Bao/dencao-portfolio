@@ -2,6 +2,7 @@ import './index.css';
 import { useScrollFade } from './hooks/useScrollFade';
 import { LightboxProvider } from './components/Lightbox';
 import Hero            from './components/Hero';
+import Education from './components/Education';
 import About           from './components/About';
 import Work            from './components/Work';
 import DesignShowcase  from './components/DesignShowcase';
@@ -20,6 +21,8 @@ export default function App() {
         <Hero />
         <div className="glow-divider" />
         <About />
+        <div className="glow-divider" />
+        <Education />
         <div className="glow-divider" />
         <Work />
         <div className="glow-divider" />

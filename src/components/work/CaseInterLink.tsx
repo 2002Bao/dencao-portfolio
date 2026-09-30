@@ -216,23 +216,30 @@ export default function CaseInterLink() {
           <strong style={{ color: 'var(--foreground)', fontWeight: 500 }}>
             Action:
           </strong>{' '}
-          Designed the full growth engine: localized GTM for Vietnam and Indonesia,
-          built a 3,000+ ambassador program as an organic distribution channel,
-          repositioned the brand from a standard crypto project to an institutional-grade
-          super app, and ran a signature campaign that rewarded real in-app activity
-          over hollow referrals.
+          Planned community AMAs and worked on localized campaigns for Vietnam and Indonesia, including KOL
+          coordination, co-marketing, ambassador communications and community content.
+          Helped translate the product narrative into campaign briefs and regional
+          activations. The examples below cover the campaign and creative work.
         </p>
       </div>
 
+      <div className="liquid-glass" style={{ padding: '1.5rem', borderRadius: '1rem' }}>
+        <h4 className="font-display" style={{ fontSize: '1.4rem', marginBottom: '.75rem' }}>AMA planning</h4>
+        <p style={{ color: 'var(--muted-foreground)', lineHeight: 1.75 }}>I contributed to planning InterLink community AMAs. These public announcements are examples of the sessions I worked on; my role was planning.</p>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', marginTop: '1rem' }}>
+          <a href="https://x.com/inter_link/status/1946506688993116251" target="_blank" rel="noopener noreferrer">AMA announcement 1 ↗</a>
+          <a href="https://x.com/inter_link/status/1947244817898934653" target="_blank" rel="noopener noreferrer">AMA announcement 2 ↗</a>
+        </div>
+      </div>
       {/* ===== Key Metrics ===== */}
       <div
         className="grid-auto-3"
         style={{ gap: '1rem' }}
       >
         {[
-          { number: '1.5M+', label: 'Verified users in 3 months' },
-          { number: '3,000+', label: 'Global ambassadors activated' },
-          { number: 'Top 2', label: 'Focus markets built from zero (VN & ID)' },
+          { number: 'VN + ID', label: 'Regional campaign focus' },
+          { number: 'Creators', label: 'KOL and ambassador coordination' },
+          { number: 'Partners', label: 'Co-marketing and community activations' },
         ].map(({ number, label }) => (
           <div
             key={label}
@@ -433,9 +440,9 @@ export default function CaseInterLink() {
             maxWidth: '48rem',
           }}
         >
-          Each campaign was designed around a specific growth lever — acquisition,
-          activation, retention, or partnerships. Every one shipped with clear KPIs
-          and a feedback loop back into the product.
+          Selected campaigns across acquisition, community participation and
+          partnerships. Figures shown here are historical program-level results
+          recorded in my earlier portfolio, rather than individually attributed outcomes.
         </p>
 
         {/* Campaign cards — scrollable row */}
@@ -698,7 +705,7 @@ export default function CaseInterLink() {
         >
           Transformed Discord and Telegram from passive chat rooms into interactive
           retention hubs — Task-to-Earn, Meme Wars, Game Tournaments, and Chat-to-Earn
-          driving daily engagement and habitual app usage.
+          supporting community participation and product discovery.
         </p>
 
         {/* Telegram data — phone mockups */}

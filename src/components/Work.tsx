@@ -13,42 +13,19 @@ interface CaseEntry {
 }
 
 const CASES: CaseEntry[] = [
-  {
-    logo: '/assets/logos/interlink.jpg',
-    company: 'InterLink',
-    role: 'Growth Marketing Executive',
-    headline: '1.5M verified users in 3 months — community-first growth for a human network',
-    Component: CaseInterLink,
-  },
-  {
-    logo: '/assets/logos/somnia.jpg',
-    company: 'Somnia Insights',
-    role: 'Content Strategy & Design',
-    headline: 'Running a one-man media engine for an L1 ecosystem',
-    Component: CaseSomnia,
-  },
-  {
-    logo: '/assets/logos/allinstation.jpg',
-    company: 'Allinstation',
-    role: 'Editorial Strategy & Content Ops',
-    headline: 'Engineering a daily habit for 600K readers',
-    Component: CaseAllinstation,
-  },
-  {
-    logo: '/assets/logos/holdstation.png',
-    company: 'Holdstation',
-    role: 'Growth Content & Brand Strategy',
-    headline: '11M organic reach for a DeFi wallet in 90 days',
-    Component: CaseHoldstation,
-  },
+  { logo: '/assets/logos/allinstation.jpg', company: 'Allinstation', role: 'Editorial & Financial Content', headline: 'Market news, explainers and social distribution for Vietnamese readers', Component: CaseAllinstation },
+  { logo: '/assets/logos/somnia.jpg', company: 'Somnia Insights', role: 'Channel Strategy & Content', headline: 'Building an X channel from research to publishing', Component: CaseSomnia },
+  { logo: '/assets/logos/interlink.jpg', company: 'InterLink', role: 'KOL & Regional Campaigns', headline: 'Creator, ambassador and co-marketing campaigns across Vietnam and Indonesia', Component: CaseInterLink },
+  { logo: '/assets/logos/holdstation.png', company: 'Holdstation', role: 'Product Education & Growth', headline: 'Connecting product stories, activation messages and measurement', Component: CaseHoldstation },
 ];
 
 function AccordionCase({ entry }: { entry: CaseEntry }) {
   const [open, setOpen] = useState(false);
+  const [hasOpened, setHasOpened] = useState(false);
 
   return (
     <div
-      className="liquid-glass scroll-fade"
+      className="liquid-glass"
       style={{
         borderRadius: '1.25rem',
         overflow: 'hidden',
@@ -56,7 +33,8 @@ function AccordionCase({ entry }: { entry: CaseEntry }) {
     >
       {/* Collapsed header — always visible */}
       <button
-        onClick={() => setOpen(!open)}
+        onClick={() => { setHasOpened(true); setOpen(!open); }}
+        aria-expanded={open}
         className="case-header"
         style={{
           width: '100%',
@@ -141,14 +119,8 @@ function AccordionCase({ entry }: { entry: CaseEntry }) {
       </button>
 
       {/* Expanded content */}
-      <div
-        style={{
-          maxHeight: open ? '6000px' : '0',
-          overflow: 'hidden',
-          transition: 'max-height 0.5s ease',
-        }}
-      >
-        <entry.Component />
+      <div hidden={!open}>
+        {hasOpened && <entry.Component />}
       </div>
     </div>
   );

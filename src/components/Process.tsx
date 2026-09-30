@@ -3,25 +3,25 @@ const STEPS = [
     number: '01',
     title: 'Research',
     description:
-      'Audience, market gaps, competitor blind spots. All before writing a single word.',
+      'Start with the audience question. Check original sources, separate facts from interpretation, and identify what needs explaining.',
   },
   {
     number: '02',
     title: 'Strategy',
     description:
-      'Content pillars, format mix, publishing rhythm — all wired to business goals.',
+      'Define content pillars, channel formats and an editorial calendar around audience needs and the brand’s objectives.',
   },
   {
     number: '03',
     title: 'Execution',
     description:
-      'Write, design, ship. I own the pipeline from idea to live post.',
+      'Develop copy and visuals, brief collaborators, and coordinate publishing with creators and marketing teams.',
   },
   {
     number: '04',
     title: 'Optimize',
     description:
-      'Track the numbers. Double down on what compounds, kill what flatlines.',
+      'Review reach, engagement and product activity separately. Use the evidence to choose the next content experiment.',
   },
 ];
 
